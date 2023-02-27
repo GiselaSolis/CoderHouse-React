@@ -3,7 +3,7 @@ import './styles.scss';
   
 function Navbar() {
     return (
-        <div class='navbar'>
+        <div className='navbar'>
             <a href="/">
                 <img src="./../../img/logo.png" alt='logo'/>
             </a>

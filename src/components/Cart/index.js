@@ -7,7 +7,7 @@ function Cart(){
             <a href="/">
                 <AiOutlineShopping/>
             </a>
-            <div class='cart-number'>2</div>
+            <div className='cart-number'>2</div>
         </div>
     )
 }
