@@ -6,7 +6,24 @@
     margin: 0 auto;
     padding: 1rem 0;
 
+    a {
+        text-decoration: none;
+        color: rgb(47, 47, 49);
+    }
+
+    img {
+        width: 10rem;
+    }
+
     il {
-        padding: .5rem 1.5rem;
+        
+        padding: .5rem 1rem;
+        border-radius: 50px;
+        transition: background-color 200ms;
+        margin: 0 1rem;
+    }
+
+    il:hover{
+        background-color: #f5cac35d;
     }
 }

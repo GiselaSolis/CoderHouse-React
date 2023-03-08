@@ -2,14 +2,26 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/itemCount';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetail from './components/ItemDetail/ItemDetail';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <Navbar />
-      <ItemListContainer greeting={'Holi'} />
-      <ItemCount />
+    <div className="container">
+      <BrowserRouter>
+        <Navbar />
+
+        <Routes>
+          <Route path='/' element={<ItemListContainer />}/>
+          <Route path='/item/:id' element={<ItemDetail />}/>
+          <Route path='/category/:category' element={<ItemListContainer />}/>
+          <Route path='*' element='404 jelp'/>
+        </Routes>
+
+      </BrowserRouter>
+
     </div>
   );
 }

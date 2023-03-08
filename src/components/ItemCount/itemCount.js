@@ -3,7 +3,7 @@ import './styles.scss';
 
 function ItemCount () {
     const stock = 5;
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState(1);
 
     function addItems() {
         if (amount < stock ) {
@@ -12,7 +12,7 @@ function ItemCount () {
     }    
 
     function deleteItems(){
-        if (amount > 0){
+        if (amount > 1){
             setAmount (amount -1 )
         }
     }
