@@ -6,6 +6,8 @@
     text-align: left;
     margin: 2rem 1rem;
     box-shadow: 0px 1px 20px 1px rgba(0,0,0,0.1);
+    transition: scale 200ms;
+
 
     img{
         width: 100%;
@@ -14,8 +16,17 @@
         border-radius: 5px;
     }
 
+    a{
+        color: black;
+        text-decoration: none;   
+    }
+
     .itemCardInfo {
         display: flex;
         justify-content: space-between;
     }
+}
+
+.itemCard:hover{
+    scale: 1.02;
 }

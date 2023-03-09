@@ -2,6 +2,8 @@ import products from "../../products/products";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemCount from "../ItemCount/itemCount";
+import './styles.scss';
+
 
 function ItemDetail(){
     const [product, setProduct] = useState({})
@@ -24,12 +26,21 @@ function ItemDetail(){
 
 
     return(
-        <div className="itemCard">
-            <img src={product.image} alt={product.name} />
-            <h4>{product.name}</h4>
-            <p>${product.price} usd</p>
-            <ItemCount />
-            <button>Add to cart</button>
+        <div className="details-container">
+            <div className="details-left">
+                <img src={product.image} alt={product.name} />
+            </div>
+
+            <div className="details-right">
+                <h2>{product.name}</h2>
+                <p>{product.description}</p>
+                <div className="price-container">
+                    <p>${product.price} usd</p>
+                    <ItemCount stock={product.stock} />
+                </div>
+                
+                <button className="button-to-cart">add to cart</button>
+            </div>
         </div>
     )
 }

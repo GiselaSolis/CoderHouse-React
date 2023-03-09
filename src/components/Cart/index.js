@@ -3,7 +3,7 @@ import './styles.scss'
 
 function Cart(){
     return (
-        <div>
+        <div className='cart-container'>
             <a href="/">
                 <AiOutlineShopping/>
             </a>
