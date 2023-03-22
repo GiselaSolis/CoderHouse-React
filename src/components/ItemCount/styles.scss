@@ -18,5 +18,35 @@
         }
     }
 
+    .disabled {
+        cursor: default;
+        background-color: rgb(218, 218, 218);
+
+        &:hover {
+            background-color: rgb(218, 218, 218);;
+        }
+    }
+
+}
+
+
+.price-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.button-to-cart{
+    border: 0;
+    background-color: #ffeccd;
+    width: 100%;
+    border-radius: 50px;
+    padding: 1rem 5rem;
+    transition: background-color 200ms;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #fde3b8;
+    }
 }
 

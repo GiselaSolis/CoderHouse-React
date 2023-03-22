@@ -1,13 +1,19 @@
 import { AiOutlineShopping } from 'react-icons/ai';
 import './styles.scss'
+import CartContext from '../../CartContext';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 function Cart(){
+    const {cartItems} = useContext(CartContext)
+    const totalInCart = cartItems.reduce((total, item) => total + item.amount, 0);
+
     return (
-        <div className='cart-container'>
-            <a href="/">
+        <div className='cart-icon-container'>
+            <Link to="/cart">
                 <AiOutlineShopping/>
-            </a>
-            <div className='cart-number'>2</div>
+            </Link>
+            {totalInCart > 0 && <div className='cart-number'> {totalInCart} </div> }
         </div>
     )
 }
