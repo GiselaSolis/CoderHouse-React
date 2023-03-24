@@ -7,7 +7,7 @@
         text-align: center;
         padding: 6rem 0;
     }
-    
+
     .cart-row{
         width: 100%;
         border: blue;
@@ -63,6 +63,10 @@
                     display: flex;
                 }
             }
+        }
+
+        &.final {
+            border-bottom: 0;
         }
         
         img{

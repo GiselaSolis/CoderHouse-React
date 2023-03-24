@@ -3,6 +3,7 @@ import CartContext from '../../CartContext';
 import { useContext } from 'react';
 import './styles.scss'; 
 import { AiOutlineDelete } from 'react-icons/ai';
+import Checkout from '../Checkout/Checkout';
 
 export default function CartContainer() {
     const {cartItems, deleteFromCart} = useContext(CartContext)
@@ -18,7 +19,7 @@ export default function CartContainer() {
                     <div className='cart-row head'>
                         <div className='cart-table-amount title'>product</div>
                         <div className='cart-table-amount title'>amount</div>
-                        <div className='cart-table-price title'>total</div>
+                        <div className='cart-table-price title'>subtotal</div>
                     </div>
 
                     {cartItems.map((item) => (
@@ -35,7 +36,14 @@ export default function CartContainer() {
                             <span onClick={()=> deleteFromCart(item.id)} className='item-delete'><AiOutlineDelete/></span>
                         </div>
                     ))}
-                    <div>your cart total is: ${calculateCartTotal()}usd</div>
+
+                    <div className='cart-row final'>
+                        <div className='cart-table-amount'></div>
+                        <div className='cart-table-amount'>Total</div>
+                        <div className='cart-table-price'>${calculateCartTotal()}usd</div>
+                    </div>
+        
+                    <Checkout cart={cartItems} total={calculateCartTotal()} />
 
                 </div>
             }
