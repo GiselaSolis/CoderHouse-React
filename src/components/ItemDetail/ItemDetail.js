@@ -5,16 +5,27 @@ import './styles.scss';
 import CartContext from '../../CartContext';
 import { useContext } from 'react';
 import { getSingleItemFromDatabase } from "../../services/firestore";
+import { useNavigate  } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 function ItemDetail(){
     const [product, setProduct] = useState({})
     const {addToCart} = useContext(CartContext)
     
     const itemId = useParams().id
-
+    const navigate = useNavigate();
 
     function handleAddToCart(amount) {
         addToCart(product, amount);
+        Swal.fire({
+            title: '',
+            text: `${amount} items added to your cart`,
+            icon: 'warning',
+            iconColor: '#f0c4bc',
+            confirmButtonText: 'check',
+            confirmButtonColor: '#f0c4bc',
+          })
+        navigate('/cart');
     }
 
     useEffect(() => {

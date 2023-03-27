@@ -1,17 +1,61 @@
 .checkout{
+    margin: 0 auto;
+    width: 60%;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1 1 1;
+    gap: 2rem;
+    grid-template-areas:
+    "head head"
+    "item item"
+    "item item"
+    "btn btn";
+
+    h2{
+        grid-area: head;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 3rem;
+
+
+    }
+
     button {
+        margin-top: 3rem;
         border: 0;
-        background-color: #ffeccd;
+        background-color: #b9e4d8;
         width: 100%;
         border-radius: 50px;
         padding: 1rem 5rem;
         transition: background-color 200ms;
         cursor: pointer;
+        grid-area: btn;
 
     &:hover{
-        background-color: #fde3b8;
+        background-color: #a3d6c8;
     }
+    }
+    label{
+        display: flex;
+        flex-direction: column;
+        p{
+            margin-bottom: .5rem;
+        }
     }
 
+    input {
+        border-radius: 20px;
+        background-color: white;
+        border: 1px solid rgb(216, 216, 216);
+        padding: .5rem 2rem;
+        outline: none;
+        
+
+        &:focus{
+            border: 1px solid #f0c4bc;
+        }
+    }
+    
 }
 

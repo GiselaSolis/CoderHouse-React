@@ -26,15 +26,7 @@
             .title{
                 padding: .5rem 2rem;
                 border-radius: 50px;
-            }
-            :nth-child(1){
                 background-color: #ffeccd;
-            }
-            :nth-child(2){
-                background-color: #f0c4bc;
-            }
-            :nth-child(3){
-                background-color: #b9e4d8;
             }
         }
 
@@ -96,5 +88,17 @@
         }
 
     }
-  
+    button {
+        border: 0;
+        background-color: #b9e4d8;
+        width: 100%;
+        border-radius: 50px;
+        padding: 1rem 5rem;
+        transition: background-color 200ms;
+        cursor: pointer;
+
+    &:hover{
+        background-color: #a3d6c8;
+    }
+    }
 }

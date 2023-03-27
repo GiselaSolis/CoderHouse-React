@@ -3,13 +3,11 @@ import CartContext from '../../CartContext';
 import { useContext } from 'react';
 import './styles.scss'; 
 import { AiOutlineDelete } from 'react-icons/ai';
-import Checkout from '../Checkout/Checkout';
+import { Link } from 'react-router-dom';
+
 
 export default function CartContainer() {
-    const {cartItems, deleteFromCart} = useContext(CartContext)
-    function calculateCartTotal() {
-        return cartItems.reduce((total, item) => total + (item.price * item.amount), 0);
-    }
+    const {cartItems, deleteFromCart, calculateCartTotal} = useContext(CartContext)
 
     return (
         <div className='cart-container'>
@@ -23,7 +21,7 @@ export default function CartContainer() {
                     </div>
 
                     {cartItems.map((item) => (
-                        <div className='cart-row body'>
+                        <div key={item.id} className='cart-row body'>
                             <div>
                                 <img src={item.image} alt={item.name} />
                                 <div className='cart-table-details'>
@@ -42,8 +40,8 @@ export default function CartContainer() {
                         <div className='cart-table-amount'>Total</div>
                         <div className='cart-table-price'>${calculateCartTotal()}usd</div>
                     </div>
-        
-                    <Checkout cart={cartItems} total={calculateCartTotal()} />
+                        
+                    <Link to={'/checkout'}><button>continue with purchase</button></Link>
 
                 </div>
             }

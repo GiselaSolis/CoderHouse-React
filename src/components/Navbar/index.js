@@ -9,9 +9,9 @@ function Navbar() {
                 <img src="/img/logo.png" alt='logo'/>
             </Link>
             <ul>
-                <il><Link to="/category/mug">mugs</Link></il>
-                <il><Link to="/category/plate">plates</Link></il>
-                <il><Link to="/category/planter">planters</Link></il>
+                <li><Link to="/category/mug">mugs</Link></li>
+                <li><Link to="/category/plate">plates</Link></li>
+                <li><Link to="/category/planter">planters</Link></li>
             </ul>
             <Cart />
         </div>

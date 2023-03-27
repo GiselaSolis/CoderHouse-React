@@ -16,23 +16,31 @@
 
 }
 
-ul il{
-    padding: .5rem 1rem;
-    border-radius: 50px;
-    transition: background-color 300ms ease;
-    margin: 0 1rem;
+ul{
+    list-style-type: none;
+    display: flex;
+
+    li{
+        padding: .5rem 1rem;
+        border-radius: 50px;
+        transition: background-color 300ms ease;
+        margin: 0 1rem;
+        text-align: center;
+
+    }
+
 }
 
-il:nth-child(1):hover{
+li:nth-child(1):hover{
     background-color: #ffeccd;
 
 }
 
-il:nth-child(2):hover{
+li:nth-child(2):hover{
     background-color: #f0c4bc;
 
 }
-il:nth-child(3):hover{
+li:nth-child(3):hover{
     background-color: #b9e4d8;
 
 }

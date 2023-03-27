@@ -64,6 +64,6 @@ export async function uploadProductsData() {
     for (let item of products){
         const collectionRef = collection(db, 'products');
         const {id} = await addDoc(collectionRef, item)
-        console.log('data uploaded', id)
+        return id;
     }
 }

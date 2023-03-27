@@ -20,7 +20,6 @@ function ItemCount ({stock, price,  handleAddToCart }) {
           }
     }
 
-
     return (
         <div>
             <div className='price-container'>
@@ -32,8 +31,9 @@ function ItemCount ({stock, price,  handleAddToCart }) {
                 </div>
             </div>
             
-
+        
             <button className="button-to-cart" onClick={() => handleAddToCart(amount)}> add to cart </button>
+            
         </div>
 
     )
