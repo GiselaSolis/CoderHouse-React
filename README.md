@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-![alt text](public/preview.gif)
+![preview](public/preview.gif)
 
 
 <br>
