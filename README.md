@@ -5,7 +5,8 @@
   <br>
 </h1>
 
-![Preview](https://i.imgur.com/A9JS1a9.gif)
+![alt text](public/preview.gif)
+
 
 <br>
 
