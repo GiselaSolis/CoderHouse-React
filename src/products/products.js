@@ -105,7 +105,7 @@ const products = [
         stock: 4,
         category: "mug",
         image: "/img/product12.jpg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description: "Lorem ipsuma dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         id: 13,
