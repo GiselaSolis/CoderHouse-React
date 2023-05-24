@@ -59,5 +59,5 @@ Open http://localhost:3000 in a web browser.
 <br>
 
 Thank you for checking out this project! If you have any questions or feedback, please don't hesitate to get in touch.
-> Twitter [@zarzapie](https://twitter.com/zarzapie)
+> LinkedIn: [Gisela Solis](https://www.linkedin.com/in/giselasolis/)
 
