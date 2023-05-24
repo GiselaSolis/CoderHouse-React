@@ -7,7 +7,6 @@
 
 ![preview](public/preview.gif)
 
-
 <br>
 
 ## Description
